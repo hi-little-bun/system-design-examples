@@ -1,0 +1,72 @@
+* DNS (Domain Name System) - A paid service provided by 3rd parties and not hosted by our servers
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+* Use RDBMS when:
+1. Data has a clear structure and relationships.
+2. Transactions require strict consistency.
+3. Complex querying with JOINs is necessary.
+
+* Use NoSQL when:
+1. Handling massive, rapidly changing, or diverse datasets.
+2. High scalability and availability are required.
+3. Schema flexibility is crucial.
+
+* Relational Databases (RDBMS)
+Structure:          Organize data into tables with predefined schemas (rows and columns).
+Schema:             Enforce a rigid schema with strong typing and relationships (e.g., foreign keys).
+Data Relationships: Well-suited for applications with complex relationships (e.g., one-to-many, many-to-many).
+Query Language:     Use SQL (Structured Query Language) for queries and operations.
+Transactions:       Support ACID (Atomicity, Consistency, Isolation, Durability) transactions for reliable operations.
+Scaling:            Vertically scalable (adding more resources to a single machine).
+Examples:           MySQL, PostgreSQL, Oracle, Microsoft SQL Server.
+
+* Use Cases:
+Banking/Financial Systems:  Require high consistency and transactional support.
+Enterprise Applications:    CRM or ERP systems with structured data and relationships.
+eCommerce:                  Orders, customers, and product catalogs with complex relationships.
+
+* NoSQL Databases
+Structure:          Store data in flexible formats like key-value pairs, documents, graphs, or wide columns.
+Schema:             Schema-less or dynamic schema; easy to modify data structures on the fly.
+Data Relationships: Better for hierarchical or unstructured data; may not handle complex relationships as well as RDBMS.
+Query Language:     Varies by type (e.g., MongoDB uses JSON-like query syntax).
+Transactions:       Typically favor eventual consistency, though some provide strong consistency guarantees.
+Scaling:            Horizontally scalable (adding more machines to distribute data).
+Examples:           MongoDB, Cassandra, Redis, Neo4j, DynamoDB.
+
+* Use Cases:
+Big Data and Analytics:     Handling large volumes of unstructured or semi-structured data (e.g., logs, IoT).
+Real-Time Applications:     Chat applications, social networks, and gaming leaderboards.
+Content Management Systems: Flexible storage for documents, images, or videos.
+Graph Databases:            Neo4j for applications like fraud detection or recommendation engines.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+* Vertical Scaling (Scaling Up)
+Definition:     Enhancing the capacity of a single machine by adding more resources like CPU, RAM, or storage.
+How It Works:   You upgrade the existing hardware to handle more load.
+
+* Pros:
+    Simpler to implement, as there's no need to manage multiple machines.
+    Easier to maintain and operate because it involves a single system.
+    Can be more cost-effective for smaller loads.
+* Cons:
+    Has a hardware limit—once the machine's capacity is maxed out, you can't scale further.
+    Downtime is often required for upgrades.
+    Risk of a single point of failure; if the machine fails, the entire system goes down.
+
+* Horizontal Scaling (Scaling Out)
+Definition:     Adding more machines (or nodes) to distribute the workload across multiple systems.
+How It Works:   Instead of upgrading one machine, you add more machines to a cluster, spreading the tasks among them.
+
+* Pros:
+    Virtually unlimited scalability; you can keep adding nodes as needed.
+    Provides redundancy and fault tolerance—if one node fails, others can handle the load.
+    Suitable for systems designed for distributed computing (e.g., microservices, cloud-native architectures).
+* Cons:
+    More complex to implement and manage due to distributed systems.
+    Network latency and data consistency can become challenges in some architectures.
+    Can be costlier for smaller applications due to added infrastructure and management overhead.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
