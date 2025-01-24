@@ -1,0 +1,43 @@
+<mxfile host="65bd71144e">
+    <diagram id="x9lF7Ikh1Ne1HWIKREvB" name="Page-1">
+        <mxGraphModel dx="1942" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Web server&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="-90" y="180" width="130" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" style="edgeStyle=none;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="3" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="If data exists, read data from cache" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" parent="4" vertex="1" connectable="0">
+                    <mxGeometry x="0.1415" y="2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" style="edgeStyle=none;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="3" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Return data to the web server" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" parent="5" vertex="1" connectable="0">
+                    <mxGeometry x="0.119" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Cache&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="180" width="130" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;save data to cache&lt;/span&gt;" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6" target="3" edge="1">
+                    <mxGeometry x="-0.027" y="5" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Cache&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="180" width="130" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;ol style=&quot;font-size: 14px;&quot;&gt;&lt;li&gt;frequent access datat in memory (cache mitigate the database calling)&lt;/li&gt;&lt;li&gt;scale the cache tier independently&lt;/li&gt;&lt;li&gt;important data should be saved in persistent data&lt;/li&gt;&lt;li&gt;Set expriration policy&lt;/li&gt;&lt;li&gt;multiple cache server can avoid single point of failure&lt;/li&gt;&lt;li&gt;Eviction policy: once the cache is full, any requests to add items to the cache might cause exiting items to be removed.&lt;/li&gt;&lt;ol&gt;&lt;li&gt;Least recently used (LRU)&lt;/li&gt;&lt;li&gt;Least frequently used (LFU)&lt;/li&gt;&lt;li&gt;First in First Out (FIFO)&lt;/li&gt;&lt;/ol&gt;&lt;/ol&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="450" width="590" height="280" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
